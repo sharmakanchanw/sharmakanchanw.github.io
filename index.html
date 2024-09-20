@@ -470,7 +470,249 @@
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
                 tablinks[i].style.color = "#f0f0f0"; // Unselected tabs text color
+            }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            font-size: 1.2em;
+        }
+
+        .contact a {
+            color: #f0f0f0;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: #fff;
+        }
+
+        /* Adjust contact layout: LinkedIn to the left of email */
+        .contact .linkedin {
+            margin-right: 5px; /* Add some spacing */
+        }
+
+        /* Profile image */
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        /* Tabs */
+        .tab {
+            overflow: hidden;
+            border-bottom: 1px solid #f0f0f0;
+            margin-top: 20px;
+        }
+
+        .tab button {
+            background-color: inherit;
+            color: #f0f0f0;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            transition: color 0.3s;
+        }
+
+        .tab button:hover {
+            color: #fff;
+        }
+
+        .tab button.active {
+            color: black;
+            background-color: #fff;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px 0;
+        }
+
+        .tabcontent img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .project img {
+            width: 200px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        .project-details {
+            max-width: 800px;
+        }
+
+        .project-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            max-width: 80%; /* Adjust the width to expand horizontally */
+            line-height: 1.4em; /* Ensure text fits within 4 lines */
+        }
+
+        .github-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #f0f0f0;
+            text-decoration: none;
+            border: 1px solid #f0f0f0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .github-button:hover {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Your Name</h1>
+
+            <div class="contact">
+                <!-- LinkedIn Icon on the left of email -->
+                <a href="https://linkedin.com/in/yourprofile" class="linkedin" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="mailto:youremail@example.com">
+                    <i class="fa fa-envelope"></i> youremail@example.com
+                </a>
+                <a href="tel:+1234567890">
+                    <i class="fa fa-phone"></i> +1 (234) 567-890
+                </a>
+            </div>
+        </div>
+
+        <!-- Profile Image -->
+        <!-- Fix the path to your profile image here -->
+        <img src="images/profile.jpg" alt="Profile Image" class="profile-image">
+
+        <!-- Tab Section -->
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Business')" id="defaultOpen">Business/Data Analytics Portfolio</button>
+            <button class="tablinks" onclick="openTab(event, 'Product')">Product/Project Management Portfolio</button>
+        </div>
+
+        <div id="Business" class="tabcontent">
+            <h2>Business/Data Analytics Portfolio</h2>
+
+            <!-- Project 1 -->
+            <div class="project">
+                <img src="business_project1.jpg" alt="Business Project 1">
+                <div class="project-details">
+                    <h3 class="project-title">Business Project 1</h3>
+                    <p class="project-description">A short description of Business Project 1 goes here. This text will now fit within 4 lines by expanding horizontally.</p>
+                    <a href="https://github.com/yourusername/business_project1" class="github-button" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <img src="business_project2.jpg" alt="Business Project 2">
+                <div class="project-details">
+                    <h3 class="project-title">Business Project 2</h3>
+                    <p class="project-description">A short description of Business Project 2 goes here. This text will now fit within 4 lines by expanding horizontally.</p>
+                    <a href="https://github.com/yourusername/business_project2" class="github-button" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="Product" class="tabcontent">
+            <h2>Product/Project Management Portfolio</h2>
+
+            <!-- Project 1 -->
+            <div class="project">
+                <img src="product_project1.jpg" alt="Product Project 1">
+                <div class="project-details">
+                    <h3 class="project-title">Product Project 1</h3>
+                    <p class="project-description">A short description of Product Project 1 goes here. This text will now fit within 4 lines by expanding horizontally.</p>
+                    <a href="https://github.com/yourusername/product_project1" class="github-button" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <img src="product_project2.jpg" alt="Product Project 2">
+                <div class="project-details">
+                    <h3 class="project-title">Product Project 2</h3>
+                    <p class="project-description">A short description of Product Project 2 goes here. This text will now fit within 4 lines by expanding horizontally.</p>
+                    <a href="https://github.com/yourusername/product_project2" class="github-button" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                tablinks[i].style.color = "#f0f0f0"; // Unselected tabs text color
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+            evt.currentTarget.style.color = "black"; // Selected tab text color
+        }
+
+        // Open the default tab
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html>
+
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
             evt.currentTarget.style.color = "black"; // Selected tab text color
