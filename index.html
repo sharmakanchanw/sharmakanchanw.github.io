@@ -48,9 +48,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: fadeIn 2s ease;
-            white-space: nowrap; /* Prevent line breaks */
-            overflow: hidden; /* Hide overflowing text */
-            text-overflow: ellipsis; /* Add ellipsis if overflow */
         }
 
         /* Contact Details */
@@ -58,8 +55,6 @@
             text-align: center;
             margin-top: 10px;
             font-size: 1.2rem;
-            display: flex; /* Use flex for alignment */
-            justify-content: center; /* Center align the items */
         }
 
         .contact-info a {
@@ -75,7 +70,9 @@
 
         /* LinkedIn Icon */
         .linkedin-icon {
-            margin-right: 10px; /* Add margin to separate from email */
+            display: block;
+            text-align: center;
+            margin: 20px auto;
         }
 
         .linkedin-icon a {
@@ -267,62 +264,92 @@
 
     <!-- Contact Info -->
     <div class="contact-info">
-        <div class="linkedin-icon">
-            <a href="https://www.linkedin.com/in/6kanchansharma/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <a href="mailto:sharma.kanchan91@gmail.com">sharma.kanchan91@gmail.com</a>
+        <a href="mailto:sharma.kanchanw@gmail.com"><i class="fas fa-envelope"></i> sharma.kanchanw@gmail.com</a>
+        <a href="tel:+9595298364"><i class="fas fa-phone"></i> +9595298364</a>
+    </div>
+
+    <!-- LinkedIn Icon -->
+    <div class="linkedin-icon">
+        <a href="https://www.linkedin.com/in/6kanchansharma/" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
 
     <!-- Profile Image -->
-    <img src="your-profile-image.jpg" alt="Kanchan Sharma" class="profile-image">
+    <img src="profile.jpg" alt="Profile Image" class="profile-image">
 
-    <!-- Tab Navigation -->
+    <!-- Tab Section -->
     <div class="tab">
-        <button class="tablinks active" onclick="openTab(event, 'About')">About Me</button>
-        <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
-        <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+        <button class="tablinks" onclick="openTab(event, 'Business')" id="defaultOpen">Business/Data Analytics Portfolio</button>
+        <button class="tablinks" onclick="openTab(event, 'Product')">Product/Project Management Portfolio</button>
     </div>
 
-    <!-- Tab Content -->
-    <div id="About" class="tabcontent" style="display: block;">
-        <h2>About Me</h2>
-        <p>Business Analyst and Product Manager with over 5 years of experience specializing in translating customer needs into actionable business solutions. Proven track record of enhancing product functionalities and streamlining processes to maximize user satisfaction and operational efficiency.</p>
-    </div>
+    <div id="Business" class="tabcontent">
+        <h2>Business/Data Analytics Portfolio</h2>
 
-    <div id="Projects" class="tabcontent">
-        <h2>Projects</h2>
-        <!-- Project Example -->
+        <!-- Project 1 -->
         <div class="project">
-            <img src="project-image1.jpg" alt="Project 1">
+            <img src="business_project1.jpg" alt="Business Project 1">
             <div class="project-details">
-                <div class="project-title">Project 1 Title</div>
-                <div class="project-description">Description of project 1 highlighting key achievements and technologies used.</div>
-                <a href="https://github.com/your-github-repo" target="_blank" class="github-button">View on GitHub</a>
+                <h3 class="project-title">Business Project 1</h3>
+                <p class="project-description">A short description of Business Project 1 goes here.</p>
+                <a href="https://github.com/yourusername/business_project1" class="github-button" target="_blank">View on GitHub</a>
             </div>
         </div>
-        <!-- Add more projects as needed -->
+
+        <!-- Project 2 -->
+        <div class="project">
+            <img src="business_project2.jpg" alt="Business Project 2">
+            <div class="project-details">
+                <h3 class="project-title">Business Project 2</h3>
+                <p class="project-description">A short description of Business Project 2 goes here.</p>
+                <a href="https://github.com/yourusername/business_project2" class="github-button" target="_blank">View on GitHub</a>
+            </div>
+        </div>
     </div>
 
-    <div id="Contact" class="tabcontent">
-        <h2>Contact Me</h2>
-        <p>If you’d like to get in touch, feel free to reach out via my email or connect with me on LinkedIn!</p>
+    <div id="Product" class="tabcontent">
+        <h2>Product/Project Management Portfolio</h2>
+
+        <!-- Project 1 -->
+        <div class="project">
+            <img src="product_project1.jpg" alt="Product Project 1">
+            <div class="project-details">
+                <h3 class="project-title">Product Project 1</h3>
+                <p class="project-description">A short description of Product Project 1 goes here.</p>
+                <a href="https://github.com/yourusername/product_project1" class="github-button" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+            <img src="product_project2.jpg" alt="Product Project 2">
+            <div class="project-details">
+                <h3 class="project-title">Product Project 2</h3>
+                <p class="project-description">A short description of Product Project 2 goes here.</p>
+                <a href="https://github.com/yourusername/product_project2" class="github-button" target="_blank">View on GitHub</a>
+            </div>
+        </div>
     </div>
 
-    <!-- JavaScript for Tab Functionality -->
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";  
+                tabcontent[i].style.display = "none";
             }
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
+                tablinks[i].style.color = "#f0f0f0"; // Unselected tabs text color
             }
-            document.getElementById(tabName).style.display = "block";  
+            document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
+            evt.currentTarget.style.color = "black"; // Selected tab text color
         }
+
+        // Open the default tab
+        document.getElementById("defaultOpen").click();
     </script>
+
 </body>
 </html>
