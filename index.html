@@ -15,7 +15,7 @@
         /* Body Style */
         body {
             font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, #1E1E1E, #2C3E50);
+            background: linear-gradient(135deg, #D3D3D3, #A9A9A9); /* Grey Gradient */
             color: #fff;
             overflow-x: hidden;
         }
@@ -26,7 +26,9 @@
             text-align: center;
             margin-top: 30px;
             font-size: 4rem;
-            color: #00BFFF; /* Lighter Blue */
+            background: linear-gradient(90deg, #00BFFF, #1E90FF); /* Blue Gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-weight: 900; /* Bolder font */
@@ -40,7 +42,9 @@
             margin: 20px auto;
             font-size: 1.4rem;
             line-height: 1.8;
-            color: #E0E0E0;
+            background: linear-gradient(90deg, #00BFFF, #1E90FF); /* Blue Gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             animation: fadeIn 2s ease;
         }
 
@@ -140,7 +144,9 @@
         .project-title {
             font-size: 1.8rem;
             margin-bottom: 10px;
-            color: #00BFFF; /* Lighter Blue */
+            background: linear-gradient(90deg, #00BFFF, #1E90FF); /* Blue Gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .project-description {
@@ -214,7 +220,7 @@
 
     <!-- Short Description -->
     <p class="description">
-        I am a data scientist with a background in biology, currently working as a student worker at the <a href="https://beaudoinlab.com/" target="_blank" style="color: #00BFFF; text-decoration: none;">Beaudoin Lab</a>. I leverage data analytics to uncover insights in biological research and contribute to cutting-edge science.
+        Experienced Business Analyst and Product Manager | Driving user-centric enhancements through data-driven insights, cross-functional collaboration, and process optimization | Proficient in Software Development Life Cycle | Proven track record of delivering customer requirements in an agile environment, achieving cost savings and stakeholder satisfaction
     </p>
 
     <!-- Profile Image -->
@@ -249,14 +255,30 @@
                 <a href="https://github.com/yourusername/business_project2" class="github-button" target="_blank">View on GitHub</a>
             </div>
         </div>
-
     </div>
 
     <div id="Product" class="tabcontent">
         <h2>Product/Project Management Portfolio</h2>
 
-        <!-- Add Product Management Projects here -->
+        <!-- Project 1 -->
+        <div class="project">
+            <img src="product_project1.jpg" alt="Product Project 1">
+            <div class="project-details">
+                <h3 class="project-title">Product Project 1</h3>
+                <p class="project-description">A short description of Product Project 1 goes here.</p>
+                <a href="https://github.com/yourusername/product_project1" class="github-button" target="_blank">View on GitHub</a>
+            </div>
+        </div>
 
+        <!-- Project 2 -->
+        <div class="project">
+            <img src="product_project2.jpg" alt="Product Project 2">
+            <div class="project-details">
+                <h3 class="project-title">Product Project 2</h3>
+                <p class="project-description">A short description of Product Project 2 goes here.</p>
+                <a href="https://github.com/yourusername/product_project2" class="github-button" target="_blank">View on GitHub</a>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -274,7 +296,7 @@
             evt.currentTarget.className += " active";
         }
 
-        // Default open tab
+        // Set the default tab open
         document.getElementById("defaultOpen").click();
     </script>
 
