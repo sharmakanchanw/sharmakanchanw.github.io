@@ -5,6 +5,8 @@
     <title>Portfolio of Kanchan Sharma</title>
     <!-- Google Fonts for Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -16,7 +18,7 @@
         body {
             font-family: 'Open Sans', sans-serif;
             background: linear-gradient(135deg, #333, #111); /* Very dark gradient grey */
-            color: #d3d3d3; /* Light gradient grey */
+            color: #f0f0f0; /* Lighter grey text */
             overflow-x: hidden;
         }
 
@@ -26,7 +28,7 @@
             text-align: center;
             margin-top: 30px;
             font-size: 4rem;
-            background: linear-gradient(90deg, #d3d3d3, #a9a9a9); /* Light gradient grey */
+            background: linear-gradient(90deg, #f0f0f0, #bfbfbf); /* Lighter grey gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
@@ -42,10 +44,45 @@
             margin: 20px auto;
             font-size: 1.4rem;
             line-height: 1.8;
-            background: linear-gradient(90deg, #d3d3d3, #a9a9a9); /* Light gradient grey */
+            background: linear-gradient(90deg, #f0f0f0, #bfbfbf); /* Lighter grey gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: fadeIn 2s ease;
+        }
+
+        /* Contact Details */
+        .contact-info {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .contact-info a {
+            color: #f0f0f0;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #bfbfbf;
+        }
+
+        /* LinkedIn Icon */
+        .linkedin-icon {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .linkedin-icon a {
+            color: #f0f0f0;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        .linkedin-icon a:hover {
+            color: #0e76a8; /* LinkedIn Blue */
         }
 
         /* Profile Image Style */
@@ -56,7 +93,7 @@
             width: 200px;
             height: 200px;
             object-fit: cover;
-            border: 6px solid #d3d3d3; /* Light gradient grey */
+            border: 6px solid #f0f0f0; /* Lighter grey */
             box-shadow: 0px 4px 15px rgba(0,0,0,0.6);
             animation: bounceIn 2s ease-in-out;
         }
@@ -77,22 +114,24 @@
             padding: 14px 20px;
             margin: 0 10px;
             font-size: 1.1rem;
-            color: #FFFFFF;
+            color: #f0f0f0;
             font-weight: 600;
             cursor: pointer;
             border-radius: 0; /* Rectangular Shape */
-            transition: transform 0.3s, background-color 0.3s;
+            transition: transform 0.3s, background-color 0.3s, color 0.3s;
         }
 
         /* Tab Button Hover Effect */
         .tab button:hover {
-            background-color: #d3d3d3; /* Light gradient grey */
+            background-color: #f0f0f0; /* Lighter grey */
             transform: scale(1.05);
+            color: black;
         }
 
         /* Active Tab Button */
         .tab button.active {
-            background-color: #d3d3d3; /* Light gradient grey */
+            background-color: #f0f0f0; /* Lighter grey */
+            color: black; /* Black text when selected */
         }
 
         /* Tab Content Style */
@@ -144,7 +183,7 @@
         .project-title {
             font-size: 1.8rem;
             margin-bottom: 10px;
-            background: linear-gradient(90deg, #d3d3d3, #a9a9a9); /* Light gradient grey */
+            background: linear-gradient(90deg, #f0f0f0, #bfbfbf); /* Lighter grey gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -168,7 +207,7 @@
 
         /* GitHub Button Hover Effect */
         .github-button:hover {
-            background-color: #d3d3d3;
+            background-color: #f0f0f0;
             transform: scale(1.05);
         }
 
@@ -223,16 +262,26 @@
         Experienced Business Analyst and Product Manager | Driving user-centric enhancements through data-driven insights, cross-functional collaboration, and process optimization | Proficient in Software Development Life Cycle | Proven track record of delivering customer requirements in an agile environment, achieving cost savings and stakeholder satisfaction
     </p>
 
-    <!-- Profile Image -->
-    <img src="WhatsApp Image 2024-03-17 at 3.55.14 PM (1).jpeg" alt="Kanchan Sharma" class="profile-image">
+    <!-- Contact Info -->
+    <div class="contact-info">
+        <a href="mailto:sharma.kanchanw@gmail.com"><i class="fas fa-envelope"></i> sharma.kanchanw@gmail.com</a>
+        <a href="tel:+9595298364"><i class="fas fa-phone"></i> +9595298364</a>
+    </div>
 
-    <!-- Tab links -->
+    <!-- LinkedIn Icon -->
+    <div class="linkedin-icon">
+        <a href="https://www.linkedin.com/in/6kanchansharma/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <!-- Profile Image -->
+    <img src="profile.jpg" alt="Profile Image" class="profile-image">
+
+    <!-- Tab Section -->
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Business')" id="defaultOpen">Business/Data Analytics Portfolio</button>
         <button class="tablinks" onclick="openTab(event, 'Product')">Product/Project Management Portfolio</button>
     </div>
 
-    <!-- Tab content -->
     <div id="Business" class="tabcontent">
         <h2>Business/Data Analytics Portfolio</h2>
 
@@ -255,9 +304,6 @@
                 <a href="https://github.com/yourusername/business_project2" class="github-button" target="_blank">View on GitHub</a>
             </div>
         </div>
-
-        <!-- Add more projects as needed -->
-
     </div>
 
     <div id="Product" class="tabcontent">
@@ -282,9 +328,6 @@
                 <a href="https://github.com/yourusername/product_project2" class="github-button" target="_blank">View on GitHub</a>
             </div>
         </div>
-
-        <!-- Add more projects as needed -->
-
     </div>
 
     <script>
@@ -297,319 +340,11 @@
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
+                tablinks[i].style.color = "#f0f0f0"; // Unselected tabs text color
             }
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
-        }
-
-        // Open the default tab
-        document.getElementById("defaultOpen").click();
-    </script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Portfolio of Kanchan Sharma</title>
-    <!-- Google Fonts for Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body Style */
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, #333, #111); /* Very dark gradient grey */
-            color: #d3d3d3; /* Light gradient grey */
-            overflow-x: hidden;
-        }
-
-        /* Title Style */
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
-            margin-top: 30px;
-            font-size: 4rem;
-            background: linear-gradient(90deg, #d3d3d3, #a9a9a9); /* Light gradient grey */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 900; /* Bolder font */
-            animation: fadeInDown 1.5s ease;
-        }
-
-        /* Short Description Style */
-        .description {
-            text-align: center;
-            max-width: 800px;
-            margin: 20px auto;
-            font-size: 1.4rem;
-            line-height: 1.8;
-            background: linear-gradient(90deg, #d3d3d3, #a9a9a9); /* Light gradient grey */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: fadeIn 2s ease;
-        }
-
-        /* Profile Image Style */
-        .profile-image {
-            display: block;
-            margin: 30px auto;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border: 6px solid #d3d3d3; /* Light gradient grey */
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.6);
-            animation: bounceIn 2s ease-in-out;
-        }
-
-        /* Tab Container Style */
-        .tab {
-            display: flex;
-            justify-content: center;
-            margin: 40px 0;
-            animation: fadeInUp 2s ease;
-        }
-
-        /* Tab Buttons */
-        .tab button {
-            background-color: #2C3E50;
-            border: none;
-            outline: none;
-            padding: 14px 20px;
-            margin: 0 10px;
-            font-size: 1.1rem;
-            color: #FFFFFF;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 0; /* Rectangular Shape */
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        /* Tab Button Hover Effect */
-        .tab button:hover {
-            background-color: #d3d3d3; /* Light gradient grey */
-            transform: scale(1.05);
-        }
-
-        /* Active Tab Button */
-        .tab button.active {
-            background-color: #d3d3d3; /* Light gradient grey */
-        }
-
-        /* Tab Content Style */
-        .tabcontent {
-            display: none;
-            padding: 20px;
-            margin: 0 auto;
-            max-width: 800px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(8px);
-            border-radius: 15px;
-            color: #FFFFFF;
-            animation: fadeIn 1.5s ease;
-        }
-
-        /* Project Card Style */
-        .project {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        /* Project Hover Effect */
-        .project:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        /* Project Image Style */
-        .project img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-right: 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
-        }
-
-        /* Project Details Style */
-        .project-details {
-            flex: 1;
-        }
-
-        .project-title {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #d3d3d3, #a9a9a9); /* Light gradient grey */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .project-description {
-            font-size: 1rem;
-            margin-bottom: 15px;
-            color: #FFFFFF;
-        }
-
-        /* GitHub Button Style */
-        .github-button {
-            text-decoration: none;
-            color: #FFFFFF;
-            background-color: #2C3E50;
-            padding: 10px 20px;
-            border-radius: 0; /* Rectangular Shape */
-            font-weight: 600;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        /* GitHub Button Hover Effect */
-        .github-button:hover {
-            background-color: #d3d3d3;
-            transform: scale(1.05);
-        }
-
-        /* Keyframe Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes bounceIn {
-            0% { transform: scale(0.5); opacity: 0; }
-            50% { transform: scale(1.2); opacity: 1; }
-            100% { transform: scale(1); }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .project {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .project img {
-                margin-bottom: 15px;
-                width: 100%;
-                height: auto;
-            }
-
-            .tab button {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Portfolio of Kanchan Sharma</h1>
-
-    <!-- Short Description -->
-    <p class="description">
-        Experienced Business Analyst and Product Manager | Driving user-centric enhancements through data-driven insights, cross-functional collaboration, and process optimization | Proficient in Software Development Life Cycle | Proven track record of delivering customer requirements in an agile environment, achieving cost savings and stakeholder satisfaction
-    </p>
-
-    <!-- Profile Image -->
-    <img src="WhatsApp Image 2024-03-17 at 3.55.14 PM (1).jpeg" alt="Kanchan Sharma" class="profile-image">
-
-    <!-- Tab links -->
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Business')" id="defaultOpen">Business/Data Analytics Portfolio</button>
-        <button class="tablinks" onclick="openTab(event, 'Product')">Product/Project Management Portfolio</button>
-    </div>
-
-    <!-- Tab content -->
-    <div id="Business" class="tabcontent">
-        <h2>Business/Data Analytics Portfolio</h2>
-
-        <!-- Project 1 -->
-        <div class="project">
-            <img src="business_project1.jpg" alt="Business Project 1">
-            <div class="project-details">
-                <h3 class="project-title">Business Project 1</h3>
-                <p class="project-description">A short description of Business Project 1 goes here.</p>
-                <a href="https://github.com/yourusername/business_project1" class="github-button" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project">
-            <img src="business_project2.jpg" alt="Business Project 2">
-            <div class="project-details">
-                <h3 class="project-title">Business Project 2</h3>
-                <p class="project-description">A short description of Business Project 2 goes here.</p>
-                <a href="https://github.com/yourusername/business_project2" class="github-button" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-
-        <!-- Add more projects as needed -->
-
-    </div>
-
-    <div id="Product" class="tabcontent">
-        <h2>Product/Project Management Portfolio</h2>
-
-        <!-- Project 1 -->
-        <div class="project">
-            <img src="product_project1.jpg" alt="Product Project 1">
-            <div class="project-details">
-                <h3 class="project-title">Product Project 1</h3>
-                <p class="project-description">A short description of Product Project 1 goes here.</p>
-                <a href="https://github.com/yourusername/product_project1" class="github-button" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project">
-            <img src="product_project2.jpg" alt="Product Project 2">
-            <div class="project-details">
-                <h3 class="project-title">Product Project 2</h3>
-                <p class="project-description">A short description of Product Project 2 goes here.</p>
-                <a href="https://github.com/yourusername/product_project2" class="github-button" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-
-        <!-- Add more projects as needed -->
-
-    </div>
-
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
+            evt.currentTarget.style.color = "black"; // Selected tab text color
         }
 
         // Open the default tab
